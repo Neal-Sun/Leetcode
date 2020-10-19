@@ -17,4 +17,24 @@ You can return the answer in any order.
 * Example 3
   Input: nums = [3,3], target = 6
   Output: [0,1]
+  
 ## Solution ##
+
+* solution 1
+        <pre><code>
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i =0; i < nums.length; i ++){
+            map.put(nums[i], i);
+        }
+        for (int i = 0; i < nums.length; i ++){
+            int temp = target - nums[i];
+            if (map.containsKey(temp) && map.get(temp) != i){
+                return new int[]{i, map.get(temp)};
+            }
+        }
+        return new int[]{0,0};
+    }
+}
+</code></pre>

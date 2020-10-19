@@ -46,7 +46,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
         *     ListNode(int x) { val = x; }
         * }
         */
-        class Solution {
+       class Solution {
            public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
                ListNode ans = new ListNode(0);
                ListNode temp = ans;

@@ -21,7 +21,7 @@ You can return the answer in any order.
 ## Solution ##
 
 * solution 1
-        <pre><code>
+        ‘’‘java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -37,4 +37,4 @@ class Solution {
         return new int[]{0,0};
     }
 }
-</code></pre>
+'''

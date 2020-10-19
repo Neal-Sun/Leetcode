@@ -20,8 +20,21 @@ You can return the answer in any order.
   
 ## Solution ##
 
+
 * solution 1
 
+    Use the brute force method with two for loops, to check if any two numbers' sum 
+    will mathch the target answer, the complexity will be O(n^2). The brute force is
+    too easy and I won't show the code.
+
+* solution 2
+
+    The second method is to use the hashTable to reduce the complexity. First we can
+    add each node into the hashTable as "key: number, value: index", then we can loop
+    over the int array, for each value, we check if there is another value equals to 
+    target minus current value. If so, then we find our answer and return. The complexity 
+    should be O(n).
+    
       class Solution {
          public int[] twoSum(int[] nums, int target) {
             HashMap<Integer, Integer> map = new HashMap<>();

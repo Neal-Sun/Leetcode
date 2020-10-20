@@ -24,9 +24,9 @@ Given a string s, find the length of the longest substring without repeating cha
 ## Solution ##
 * Solution 1
 
-The simple method is to use the hashmap to check if there is a repeat letter, start from each letter,
-and finally return the longest length. There will be a for loop inside another for loop, so the time
-complexity should be O(n^2).
+    The simple method is to use the hashmap to check if there is a repeat letter, start from each letter,
+    and finally return the longest length. There will be a for loop inside another for loop, so the time
+    complexity should be O(n^2).
 
         class Solution {
             public int lengthOfLongestSubstring(String s) {
@@ -54,8 +54,8 @@ complexity should be O(n^2).
 
 * Solution 2
 
-Reduce the time complexity from the last solution. Use two pointers instead of a for loop to 
-identify a sub string, so the time complexity will only be O(n) because each letter has been
-used at most twice.
+    Reduce the time complexity from the last solution. Use two pointers instead of a for loop to 
+    identify a sub string, so the time complexity will only be O(n) because each letter has been
+    used at most twice.
 
         

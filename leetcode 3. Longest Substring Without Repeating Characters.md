@@ -55,7 +55,33 @@ Given a string s, find the length of the longest substring without repeating cha
 * Solution 2
 
     Reduce the time complexity from the last solution. Use two pointers instead of a for loop to 
-    identify a sub string, so the time complexity will only be O(n) because each letter has been
+    identify a sub string, so the time complexity will only be O(n), because each letter has been
     used at most twice.
+    
+        class Solution {
+            public int lengthOfLongestSubstring(String s) {
+                if (s == null) return 0;
+                int ans = 0, start = 0, end = 0, temp = 0;
+                HashSet<Character> set = new HashSet<>();
+                while(end < s.length()){
+                    char letter = s.charAt(end);
+                    if (!set.contains(letter)){
+                        set.add(letter);
+                        end ++;
+                        temp ++;
+                    }else{
+                        while(s.charAt(start) != letter){
+                            set.remove(s.charAt(start));
+                            temp --;
+                            start ++;
+                        }
+                        start ++;
+                        end ++;
+                    }
+                    if (temp > ans) ans = temp;
+                }
+                return ans;
+            }
+        }
 
         
